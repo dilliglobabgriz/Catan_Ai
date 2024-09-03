@@ -58,12 +58,14 @@ class Board:
 
 	# Currently configured for a 7 tile board
 	def __str__(self):
-		ret_str = ''   
-		ret_str += f'   {repr(self.board[0])}    {repr(self.board[1])}\n'
-		ret_str += '\n'
-		ret_str += f'{repr(self.board[2])}    {repr(self.board[3])}    {repr(self.board[4])}\n'
-		ret_str +='\n'
-		ret_str += f'   {repr(self.board[5])}    {repr(self.board[6])}'
+		ret_str =  '       A      B\n'   
+		ret_str += f'   C  {repr(self.board[0])}  D  {repr(self.board[1])}  E\n'
+		ret_str += '   F      G      H\n'
+		ret_str += f'I  {repr(self.board[2])}  J  {repr(self.board[3])}  K  {repr(self.board[4])}  L\n'
+		ret_str += 'M      N      O      P\n'
+		ret_str += f'   P  {repr(self.board[5])}  Q  {repr(self.board[6])}  R\n'
+		ret_str += '   S      T      U\n'
+		ret_str += '       V       W'
 		return ret_str
 		
 			
