@@ -27,7 +27,7 @@ class Board:
 		self.board: List[Tile] = [Tile(), Tile(), Tile(), Tile(), Tile(), Tile(), Tile()]
 		self.resources: List[str] = ['lumber', 'brick', 'sheep', 'wheat', 'ore']
 		self.productions: List[int] = [2,3,4,5,6,7,8,9,10,11,12]
-		self.settle_spots: List[str] = [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x]
+		self.settle_spots: List[str] = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x"]
 
 
 	def create_custom_board(self):
@@ -59,14 +59,14 @@ class Board:
 
 	# Currently configured for a 7 tile board
 	def __str__(self):
-		ret_str =  '       A      B\n'   
-		ret_str += f'   C  {"\u0332".join(repr(self.board[0])+" ")} D  {"\u0332".join(repr(self.board[1])+" ")} E\n'
-		ret_str += '   F      G      H\n'
-		ret_str += f'I  {"\u0332".join(repr(self.board[2])+" ")} J  {"\u0332".join(repr(self.board[3])+" ")} K  {"\u0332".join(repr(self.board[4])+" ")} L\n'
-		ret_str += 'M      N      O      P\n'
-		ret_str += f'   P  {"\u0332".join(repr(self.board[5])+" ")} Q  {"\u0332".join(repr(self.board[6])+" ")} R\n'
-		ret_str += '   S      T      U\n'
-		ret_str += '       V      W'
+		ret_str =  f'      {self.settle_spots[0]}      {self.settle_spots[1]}\n'   
+		ret_str += f'   {self.settle_spots[2]} {"\u0332".join(repr(self.board[0])+" ")} {self.settle_spots[3]} {"\u0332".join(repr(self.board[1])+" ")} {self.settle_spots[4]}\n'
+		ret_str += f'   {self.settle_spots[5]}     {self.settle_spots[6]}     {self.settle_spots[7]}\n'
+		ret_str += f'{self.settle_spots[8]} {"\u0332".join(repr(self.board[2])+" ")} {self.settle_spots[9]} {"\u0332".join(repr(self.board[3])+" ")} {self.settle_spots[10]} {"\u0332".join(repr(self.board[4])+" ")} {self.settle_spots[11]}\n'
+		ret_str += f'{self.settle_spots[12]}     {self.settle_spots[13]}     {self.settle_spots[14]}     {self.settle_spots[15]}\n'
+		ret_str += f'   {self.settle_spots[16]} {"\u0332".join(repr(self.board[5])+" ")} {self.settle_spots[17]} {"\u0332".join(repr(self.board[6])+" ")} {self.settle_spots[18]}\n'
+		ret_str += f'   {self.settle_spots[19]}     {self.settle_spots[20]}     {self.settle_spots[21]}\n'
+		ret_str += f'      {self.settle_spots[22]}     {self.settle_spots[23]}'
 		return ret_str
 		
 			
