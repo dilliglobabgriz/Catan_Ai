@@ -22,7 +22,7 @@ class Player:
         else:
             self.resource_cards[res_card_type] += num_cards
 
-    def remove_resource_card(self, res_card_type: str, num_cards: int=0) -> None:
+    def remove_resource_card(self, res_card_type: str, num_cards: int=1) -> None:
         if not isinstance(res_card_type, str):
             raise TypeError(f"Invalid input: '{res_card_type}'. Must be a string")
         elif res_card_type not in self.resource_cards.keys():
