@@ -115,5 +115,6 @@ def main():
     b.create_custom_board()
     print(repr(b))
     print(str(b))
+
 if __name__ == '__main__':
     main()
